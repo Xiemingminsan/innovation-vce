@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Read(//c/Users/Myne/Desktop/Okay/**)"
+      "Read(//c/Users/Myne/Desktop/Okay/**)",
+      "Bash(python3 -c \":*)",
+      "Bash(node -e \":*)"
     ]
   }
 }
