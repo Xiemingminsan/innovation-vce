@@ -132,20 +132,15 @@
   <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md border-b border-surface-200 z-50" x-data="{ scrolled: false }" @scroll.window="scrolled = window.scrollY > 20">
     <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
       <!-- Logo area -->
-      <a href="#hero" class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-lg bg-brand-500 flex items-center justify-center">
-          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-        </div>
-        <span class="font-display font-bold text-lg text-ink-900 tracking-tight">VCE<span class="text-energy-red">.</span></span>
+      <a href="#hero" class="flex items-center">
+        <img src="photos/logo.png" alt="VCE Logo" class="h-10 w-auto" style="mix-blend-mode: multiply;">
       </a>
 
       <!-- Desktop Nav -->
-      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-ink-600">
+      <div class="hidden md:flex items-center gap-7 text-sm font-medium text-ink-600">
         <a href="#problem" class="hover:text-ink-900 transition">Problem</a>
         <a href="#solution" class="hover:text-ink-900 transition">Solution</a>
-        <a href="#product" class="hover:text-ink-900 transition">Product</a>
         <a href="#traction" class="hover:text-ink-900 transition">Traction</a>
-        <a href="#business-model" class="hover:text-ink-900 transition">Model</a>
         <a href="#market" class="hover:text-ink-900 transition">Market</a>
         <a href="#financials" class="hover:text-ink-900 transition">Financials</a>
         <a href="#team" class="hover:text-ink-900 transition">Team</a>
@@ -165,9 +160,7 @@
     <div x-show="navOpen" x-transition class="md:hidden bg-white border-t border-surface-200 px-6 py-4 space-y-3">
       <a @click="navOpen=false" href="#problem" class="block text-sm font-medium text-ink-700 py-2">Problem</a>
       <a @click="navOpen=false" href="#solution" class="block text-sm font-medium text-ink-700 py-2">Solution</a>
-      <a @click="navOpen=false" href="#product" class="block text-sm font-medium text-ink-700 py-2">Product</a>
       <a @click="navOpen=false" href="#traction" class="block text-sm font-medium text-ink-700 py-2">Traction</a>
-      <a @click="navOpen=false" href="#business-model" class="block text-sm font-medium text-ink-700 py-2">Model</a>
       <a @click="navOpen=false" href="#market" class="block text-sm font-medium text-ink-700 py-2">Market</a>
       <a @click="navOpen=false" href="#financials" class="block text-sm font-medium text-ink-700 py-2">Financials</a>
       <a @click="navOpen=false" href="#team" class="block text-sm font-medium text-ink-700 py-2">Team</a>
@@ -188,9 +181,16 @@
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <!-- Left: Copy -->
         <div>
-          <div class="tag bg-brand-100 text-brand-700 mb-6">
+          <div class="tag bg-brand-100 text-brand-700 mb-4">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"/></svg>
-            Ethiopia's First Pre-Engineered Hybrid Power System
+            View Computer Engineering PLC
+          </div>
+
+          <div class="mb-5">
+            <p class="font-display font-extrabold text-2xl md:text-3xl text-ink-900 tracking-tight leading-tight">
+              Multi-Source <span class="text-brand-500">Hybrid Power</span> System
+            </p>
+            <p class="text-ink-400 text-sm mt-1 font-medium">Ethiopia's First Pre-Engineered Solution</p>
           </div>
 
           <h1 class="font-display font-extrabold text-4xl md:text-[52px] leading-[1.1] tracking-tight text-ink-900 mb-6">
@@ -223,11 +223,8 @@
 
         <!-- Right: Product image -->
         <div class="relative">
-          <div class="photo-placeholder aspect-[3/4] max-w-md mx-auto rounded-2xl shadow-2xl shadow-brand-900/10">
-            <div class="p-8">
-              <svg class="w-12 h-12 text-brand-300 mx-auto mb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z"/></svg>
-              <p>[INSERT PHOTO]<br>Hero cabinet photo<br>(clean background, doors open)</p>
-            </div>
+          <div class="max-w-md mx-auto">
+            <img src="photos/hero1.png" alt="VCE Multi-Source Hybrid Power System cabinet" class="w-full h-auto" style="mix-blend-mode: multiply; filter: drop-shadow(0 24px 48px rgba(32,56,100,0.18));">
           </div>
           <!-- Patent badge -->
           <div class="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg px-4 py-3 border border-surface-200">
@@ -262,8 +259,8 @@
       <!-- Stats grid -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16">
         <div class="bg-surface-50 rounded-2xl p-6 text-center lift">
-          <p class="font-display font-extrabold text-4xl md:text-5xl text-energy-red mb-2">~55%</p>
-          <p class="text-ink-600 text-sm leading-snug">of population with<br>electricity access</p>
+          <p class="font-display font-extrabold text-4xl md:text-5xl text-energy-red mb-2">57%</p>
+          <p class="text-ink-600 text-sm leading-snug">national electricity<br>access (urban)</p>
           <p class="text-ink-400 text-xs mt-1">Rural: only 36%</p>
         </div>
         <div class="bg-surface-50 rounded-2xl p-6 text-center lift">
@@ -408,6 +405,31 @@
           <h4 class="font-display font-bold text-ink-900 mb-2">Natural Gas Option</h4>
           <p class="text-ink-500 text-sm">Supports diesel or natural gas generators — aligned with Ethiopia's Ogaden gas development.</p>
         </div>
+        <div class="bg-white rounded-xl overflow-hidden border border-surface-200 md:col-span-3">
+          <div class="grid md:grid-cols-3 gap-0">
+            <img src="photos/photo_20_2026-03-03_01-27-06.jpg" alt="Solar panels installed on rooftop" class="w-full h-48 object-cover">
+            <img src="photos/photo_23_2026-03-03_01-28-55.jpg" alt="VCE cabinet exterior — clean unit ready for deployment" class="w-full h-48 object-cover">
+            
+            <img src="photos/photo_19_2026-03-03_01-27-06.jpg" alt="Large rooftop solar array installation" class="w-full h-48 object-cover">
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-surface-200 lift md:col-span-3" style="border-left: 3px solid #059669;">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-energy-greenLight flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-energy-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h4 class="font-display font-bold text-ink-900 mb-1">EV Charging Opportunity</h4>
+              <p class="text-ink-500 text-sm mb-3">8–11 hours of direct solar EV charging daily. Supports station deployment every 50 km across Ethiopia — aligns with the national EV and gas infrastructure strategy.</p>
+              <div class="flex flex-wrap gap-3 text-xs">
+                <span class="bg-energy-greenLight text-energy-green font-semibold px-3 py-1 rounded-full">8–11 hrs/day solar charging</span>
+                <span class="bg-brand-100 text-brand-700 font-semibold px-3 py-1 rounded-full">Every 50 km deployment</span>
+                <span class="bg-brand-100 text-brand-700 font-semibold px-3 py-1 rounded-full">Grid + Battery + Diesel compatible</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -418,11 +440,8 @@
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <!-- Photo -->
-        <div class="photo-placeholder aspect-square rounded-2xl">
-          <div class="p-8">
-            <svg class="w-16 h-16 text-brand-300 mx-auto mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z"/></svg>
-            <p>[INSERT PHOTO]<br>Cabinet interior showing<br>28 labeled components</p>
-          </div>
+        <div class="rounded-2xl">
+          <img src="photos/photo_6_2026-03-03_01-27-06.jpg" alt="VCE cabinet interior — battery bank and inverter" class="w-full h-auto" style="mix-blend-mode: multiply; filter: drop-shadow(0 16px 32px rgba(32,56,100,0.14));">
         </div>
 
         <!-- Specs -->
@@ -582,70 +601,124 @@
 
       <!-- Pilot photos row -->
       <div class="grid md:grid-cols-3 gap-4 mt-8">
-        <div class="photo-placeholder aspect-video rounded-xl"><p class="p-4">[INSERT PHOTO]<br>Pilot site 1</p></div>
-        <div class="photo-placeholder aspect-video rounded-xl"><p class="p-4">[INSERT PHOTO]<br>Pilot site 2</p></div>
-        <div class="photo-placeholder aspect-video rounded-xl"><p class="p-4">[INSERT PHOTO]<br>System close-up in field</p></div>
+        <div class="aspect-video rounded-xl overflow-hidden shadow-sm">
+          <img src="photos/photo_39_2026-03-03_01-28-55.jpg" alt="VCE installation team deploying cabinet on-site" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-video rounded-xl overflow-hidden shadow-sm">
+          <img src="photos/photo_43_2026-03-03_01-28-55.jpg" alt="Community installation — cabinet being moved into building" class="w-full h-full object-cover">
+        </div>
+        <div class="aspect-video rounded-xl overflow-hidden shadow-sm">
+          <img src="photos/photo_1_2026-03-03_01-28-55.jpg" alt="Cabinet interior showing battery bank" class="w-full h-full object-cover">
+        </div>
       </div>
     </div>
   </section>
 
 
-  <!-- ============== BUSINESS MODEL ============== -->
-  <section id="business-model" class="py-20 md:py-28 bg-white">
+  <!-- ============== COMPETITIVE LANDSCAPE ============== -->
+  <section id="competitive" class="py-20 md:py-28 bg-white">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
-        <div class="tag bg-brand-100 text-brand-700 mx-auto mb-4">Business Model</div>
-        <h2 class="font-display font-extrabold text-3xl md:text-[42px] text-ink-900 tracking-tight mb-4">How We Generate Revenue</h2>
-        <p class="text-ink-500 text-lg max-w-2xl mx-auto">Multiple revenue streams built around the full lifecycle of hybrid power deployment — from first sale to lifetime service.</p>
+        <div class="tag bg-brand-100 text-brand-700 mx-auto mb-4">Competitive Landscape</div>
+        <h2 class="font-display font-extrabold text-3xl md:text-[42px] text-ink-900 tracking-tight mb-4">Why <span class="text-brand-500">VCE Wins</span></h2>
+        <p class="text-ink-500 text-lg max-w-2xl mx-auto">No competitor offers a locally built, pre-engineered, pilot-tested hybrid cabinet with integrated financing.</p>
       </div>
 
+      <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-surface-200 mb-10">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-brand-500 text-white">
+                <th class="px-5 py-4 text-left font-display font-bold">Feature</th>
+                <th class="px-4 py-4 text-center font-display font-bold opacity-75">Diesel<br>Generator</th>
+                <th class="px-4 py-4 text-center font-display font-bold opacity-75">Solar-Only</th>
+                <th class="px-4 py-4 text-center font-display font-bold opacity-75">Other<br>Hybrid</th>
+                <th class="px-4 py-4 text-center font-display font-bold" style="color:#86efac;">VCE Hybrid<br>System</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-surface-100">
+                <td class="px-5 py-3 font-medium text-ink-800">24/7 Reliable Power</td>
+                <td class="px-4 py-3 text-center check-no">✕</td>
+                <td class="px-4 py-3 text-center check-no">✕</td>
+                <td class="px-4 py-3 text-center check-partial">Partial</td>
+                <td class="px-4 py-3 text-center check-yes">✓ Auto Switching</td>
+              </tr>
+              <tr class="border-b border-surface-100 bg-surface-50">
+                <td class="px-5 py-3 font-medium text-ink-800">Single Cabinet Integration</td>
+                <td class="px-4 py-3 text-center check-no">✕</td>
+                <td class="px-4 py-3 text-center check-no">✕</td>
+                <td class="px-4 py-3 text-center check-no">✕</td>
+                <td class="px-4 py-3 text-center check-yes">✓</td>
+              </tr>
+              <tr class="border-b border-surface-100">
+                <td class="px-5 py-3 font-medium text-ink-800">Cost Efficiency</td>
+                <td class="px-4 py-3 text-center check-no text-xs">✕ High fuel</td>
+                <td class="px-4 py-3 text-center check-yes text-xs">✓ Low ops</td>
+                <td class="px-4 py-3 text-center check-partial">Partial</td>
+                <td class="px-4 py-3 text-center check-yes">✓ Smart Prioritization</td>
+              </tr>
+              <tr class="border-b border-surface-100 bg-surface-50">
+                <td class="px-5 py-3 font-medium text-ink-800">Renewable Friendly</td>
+                <td class="px-4 py-3 text-center check-no">✕</td>
+                <td class="px-4 py-3 text-center check-yes">✓</td>
+                <td class="px-4 py-3 text-center check-partial">Partial</td>
+                <td class="px-4 py-3 text-center check-yes">✓ Weather-Oriented</td>
+              </tr>
+              <tr class="border-b border-surface-100">
+                <td class="px-5 py-3 font-medium text-ink-800">Pilot Tested in Ethiopia</td>
+                <td class="px-4 py-3 text-center check-no">✕</td>
+                <td class="px-4 py-3 text-center check-partial">Limited</td>
+                <td class="px-4 py-3 text-center check-partial">Limited</td>
+                <td class="px-4 py-3 text-center check-yes">✓ 15 Locations</td>
+              </tr>
+              <tr class="border-b border-surface-100 bg-surface-50">
+                <td class="px-5 py-3 font-medium text-ink-800">Financing Options</td>
+                <td class="px-4 py-3 text-center check-no">✕</td>
+                <td class="px-4 py-3 text-center check-partial">Limited</td>
+                <td class="px-4 py-3 text-center check-partial">Partial</td>
+                <td class="px-4 py-3 text-center check-yes">✓ Flexible + Microfinance</td>
+              </tr>
+              <tr>
+                <td class="px-5 py-3 font-medium text-ink-800">Government Alignment</td>
+                <td class="px-4 py-3 text-center check-no">✕</td>
+                <td class="px-4 py-3 text-center check-partial">Limited</td>
+                <td class="px-4 py-3 text-center check-partial">Partial</td>
+                <td class="px-4 py-3 text-center check-yes">✓ Gov't & Electrification</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- First Mover Advantages -->
       <div class="grid md:grid-cols-3 gap-4">
-        <div class="bg-surface-50 rounded-xl p-6 border border-surface-200 lift">
-          <div class="w-10 h-10 rounded-lg bg-brand-100 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+        <div class="bg-surface-50 rounded-xl p-5 border border-surface-200 flex gap-3">
+          <div class="w-9 h-9 rounded-lg bg-energy-greenLight flex items-center justify-center shrink-0">
+            <svg class="w-4 h-4 text-energy-green" fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
           </div>
-          <h4 class="font-display font-bold text-ink-900 mb-2">Direct Sales</h4>
-          <p class="text-ink-500 text-sm">Cabinet unit sales to NGOs, health bureaus, development agencies, government institutions, and commercial clients.</p>
+          <div>
+            <h4 class="font-display font-bold text-ink-900 text-sm mb-1">Patent Applied</h4>
+            <p class="text-ink-500 text-xs">Hybrid Solar Prototype & proprietary system design filed at Ethiopian IP Office.</p>
+          </div>
         </div>
-
-        <div class="bg-surface-50 rounded-xl p-6 border border-surface-200 lift">
-          <div class="w-10 h-10 rounded-lg bg-brand-100 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <div class="bg-surface-50 rounded-xl p-5 border border-surface-200 flex gap-3">
+          <div class="w-9 h-9 rounded-lg bg-energy-greenLight flex items-center justify-center shrink-0">
+            <svg class="w-4 h-4 text-energy-green" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
           </div>
-          <h4 class="font-display font-bold text-ink-900 mb-2">Engineering & Installation</h4>
-          <p class="text-ink-500 text-sm">Site assessment, custom configuration, professional deployment, and commissioning services per project.</p>
+          <div>
+            <h4 class="font-display font-bold text-ink-900 text-sm mb-1">Real Performance Proven</h4>
+            <p class="text-ink-500 text-xs">Pilot tested across 15 geographic locations with documented performance data.</p>
+          </div>
         </div>
-
-        <div class="bg-surface-50 rounded-xl p-6 border border-surface-200 lift">
-          <div class="w-10 h-10 rounded-lg bg-brand-100 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+        <div class="bg-surface-50 rounded-xl p-5 border border-surface-200 flex gap-3">
+          <div class="w-9 h-9 rounded-lg bg-brand-100 flex items-center justify-center shrink-0">
+            <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           </div>
-          <h4 class="font-display font-bold text-ink-900 mb-2">Maintenance Contracts</h4>
-          <p class="text-ink-500 text-sm">Recurring annual service agreements, preventive maintenance, remote monitoring, and spare parts supply.</p>
-        </div>
-
-        <div class="bg-surface-50 rounded-xl p-6 border border-surface-200 lift">
-          <div class="w-10 h-10 rounded-lg bg-brand-100 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          <div>
+            <h4 class="font-display font-bold text-ink-900 text-sm mb-1">Early Gov't Partnerships</h4>
+            <p class="text-ink-500 text-xs">Strong relationships with ERA and government institutions — built over 20+ years.</p>
           </div>
-          <h4 class="font-display font-bold text-ink-900 mb-2">Pay-as-You-Go</h4>
-          <p class="text-ink-500 text-sm">Microfinance-backed installment plans for rural communities and institutions with limited upfront capital.</p>
-        </div>
-
-        <div class="bg-surface-50 rounded-xl p-6 border border-surface-200 lift">
-          <div class="w-10 h-10 rounded-lg bg-brand-100 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
-          </div>
-          <h4 class="font-display font-bold text-ink-900 mb-2">System Expansion</h4>
-          <p class="text-ink-500 text-sm">Scalable upgrade contracts as client energy needs grow — from 2KW starter units to multi-cabinet megawatt installations.</p>
-        </div>
-
-        <div class="bg-surface-50 rounded-xl p-6 border border-surface-200 lift">
-          <div class="w-10 h-10 rounded-lg bg-brand-100 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-          </div>
-          <h4 class="font-display font-bold text-ink-900 mb-2">Leasing</h4>
-          <p class="text-ink-500 text-sm">Flexible ownership model for institutions that prefer operational expenditure over capital investment.</p>
         </div>
       </div>
     </div>
@@ -769,6 +842,37 @@
       <div class="text-center mb-16">
         <div class="tag mx-auto mb-4" style="background:rgba(255,255,255,0.12); color:#fff;">Financial Projections</div>
         <h2 class="font-display font-extrabold text-3xl md:text-[42px] text-white tracking-tight mb-4">5-Year Growth Plan</h2>
+      </div>
+
+      <!-- Revenue Streams strip -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+        <div class="rounded-xl px-6 py-5 flex items-start gap-4" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12);">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center shrink-0" style="background-color:#bf0b0c;">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          </div>
+          <div>
+            <p class="text-white font-semibold font-display text-sm">Direct Sales</p>
+            <p class="text-ink-400 text-xs mt-1 leading-snug">Hardware units sold directly to businesses, institutions, and developers</p>
+          </div>
+        </div>
+        <div class="rounded-xl px-6 py-5 flex items-start gap-4" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12);">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center shrink-0" style="background-color:#bf0b0c;">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <div>
+            <p class="text-white font-semibold font-display text-sm">Engineering & Installation</p>
+            <p class="text-ink-400 text-xs mt-1 leading-snug">Site assessment, custom integration, deployment, and commissioning services</p>
+          </div>
+        </div>
+        <div class="rounded-xl px-6 py-5 flex items-start gap-4" style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12);">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center shrink-0" style="background-color:#bf0b0c;">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <p class="text-white font-semibold font-display text-sm">Spare Parts & Recurring</p>
+            <p class="text-ink-400 text-xs mt-1 leading-snug">Maintenance contracts, component upgrades, and annual service agreements</p>
+          </div>
+        </div>
       </div>
 
       <!-- Revenue table -->
@@ -906,61 +1010,174 @@
   </section>
 
 
+  <!-- ============== ROADMAP ============== -->
+  <section id="roadmap" class="py-20 md:py-28 bg-surface-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <div class="tag bg-brand-100 text-brand-700 mx-auto mb-4">Roadmap & Milestones</div>
+        <h2 class="font-display font-extrabold text-3xl md:text-[42px] text-ink-900 tracking-tight mb-4">4-Phase <span class="text-brand-500">Growth Plan</span></h2>
+        <p class="text-ink-500 text-lg max-w-2xl mx-auto">From market entry to market leadership in 5 years — anchored by healthcare, scaled by SMEs, driven by data.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <!-- Phase 1 -->
+        <div class="bg-white rounded-2xl p-6 border border-surface-200 lift">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-brand-500 flex items-center justify-center shrink-0">
+              <span class="font-display font-extrabold text-white text-sm">1</span>
+            </div>
+            <div>
+              <p class="font-display font-bold text-ink-900">Market Entry & Validation</p>
+              <p class="text-ink-400 text-xs">Year 1</p>
+            </div>
+          </div>
+          <ul class="space-y-2 text-sm text-ink-600">
+            <li class="flex items-start gap-2"><span class="text-energy-green font-bold mt-0.5">→</span>Secure initial 90 institutional projects (priority: Health & Education)</li>
+            <li class="flex items-start gap-2"><span class="text-energy-green font-bold mt-0.5">→</span>Achieve Break-Even Revenue of 49M ETB</li>
+            <li class="flex items-start gap-2"><span class="text-energy-green font-bold mt-0.5">→</span>Establish supply chain partnerships for hybrid solar components</li>
+          </ul>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="bg-white rounded-2xl p-6 border border-surface-200 lift">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style="background-color:#bf0b0c;">
+              <span class="font-display font-extrabold text-white text-sm">2</span>
+            </div>
+            <div>
+              <p class="font-display font-bold text-ink-900">Operational Optimization</p>
+              <p class="text-ink-400 text-xs">Year 2–3</p>
+            </div>
+          </div>
+          <ul class="space-y-2 text-sm text-ink-600">
+            <li class="flex items-start gap-2"><span class="text-energy-green font-bold mt-0.5">→</span>Expand to SME & Commercial segments targeting 434-unit SAM</li>
+            <li class="flex items-start gap-2"><span class="text-energy-green font-bold mt-0.5">→</span>Launch maintenance and after-sales service hub</li>
+          </ul>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="bg-white rounded-2xl p-6 border border-surface-200 lift">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-brand-600 flex items-center justify-center shrink-0">
+              <span class="font-display font-extrabold text-white text-sm">3</span>
+            </div>
+            <div>
+              <p class="font-display font-bold text-ink-900">Strategic Scaling</p>
+              <p class="text-ink-400 text-xs">Year 4</p>
+            </div>
+          </div>
+          <ul class="space-y-2 text-sm text-ink-600">
+            <li class="flex items-start gap-2"><span class="text-energy-green font-bold mt-0.5">→</span>Launch regional expansion beyond primary cities and priority zones</li>
+            <li class="flex items-start gap-2"><span class="text-energy-green font-bold mt-0.5">→</span>Introduce premium and budget product tiers</li>
+          </ul>
+        </div>
+
+        <!-- Phase 4 -->
+        <div class="bg-white rounded-2xl p-6 border border-surface-200 lift" style="border-color: #059669; border-width: 2px;">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-energy-green flex items-center justify-center shrink-0">
+              <span class="font-display font-extrabold text-white text-sm">4</span>
+            </div>
+            <div>
+              <p class="font-display font-bold text-ink-900">Market Leadership</p>
+              <p class="text-ink-400 text-xs">Year 5</p>
+            </div>
+          </div>
+          <ul class="space-y-2 text-sm text-ink-600">
+            <li class="flex items-start gap-2"><span class="text-energy-green font-bold mt-0.5">→</span>Capture significant share of 1,259 target units across all segments</li>
+            <li class="flex items-start gap-2"><span class="text-energy-green font-bold mt-0.5">→</span>Hit peak revenue of <strong class="text-energy-green">507M ETB</strong> — Ethiopia's market leader</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <!-- ============== TEAM ============== -->
   <section id="team" class="py-20 md:py-28 bg-white">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
         <div class="tag bg-brand-100 text-brand-700 mx-auto mb-4">Our Team</div>
         <h2 class="font-display font-extrabold text-3xl md:text-[42px] text-ink-900 tracking-tight mb-4">Built by Engineers. Led by Experience.</h2>
+        <p class="text-ink-500 text-lg max-w-2xl mx-auto">A full execution team combining 20+ years of local market expertise with deep technical and commercial skills.</p>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
-        <!-- Esayas -->
-        <div class="bg-surface-50 rounded-2xl p-5 text-center border border-surface-200">
-          <div class="photo-placeholder w-20 h-20 rounded-full mx-auto mb-4"><p class="text-[10px] p-1">Esayas<br>photo</p></div>
-          <h4 class="font-display font-bold text-ink-900 text-sm">Esayas Efa</h4>
-          <p class="text-brand-600 text-xs font-semibold mb-2">CEO / Founder</p>
-          <p class="text-ink-400 text-xs">20+ yrs Computer Eng.</p>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
+        <!-- Executive Leadership -->
+        <div class="bg-surface-50 rounded-2xl p-6 border border-surface-200 lift text-center">
+          <div class="w-14 h-14 rounded-2xl bg-brand-500 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h4 class="font-display font-bold text-ink-900 mb-1">Executive Leadership</h4>
+          <p class="text-brand-600 text-xs font-semibold mb-2">CEO & COO</p>
+          <p class="text-ink-500 text-sm">10+ years senior leadership experience in strategic growth and operations management</p>
         </div>
-        <!-- Henock -->
-        <div class="bg-surface-50 rounded-2xl p-5 text-center border border-surface-200">
-          <div class="photo-placeholder w-20 h-20 rounded-full mx-auto mb-4"><p class="text-[10px] p-1">Henock<br>photo</p></div>
-          <h4 class="font-display font-bold text-ink-900 text-sm">Henock Assefa</h4>
-          <p class="text-brand-600 text-xs font-semibold mb-2">Technical Lead</p>
-          <p class="text-ink-400 text-xs">8 yrs Solar & Electrical</p>
+
+        <!-- Technical & Engineering -->
+        <div class="bg-surface-50 rounded-2xl p-6 border border-surface-200 lift text-center">
+          <div class="w-14 h-14 rounded-2xl bg-brand-500 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round"/><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round"/></svg>
+          </div>
+          <h4 class="font-display font-bold text-ink-900 mb-1">Technical & Engineering</h4>
+          <p class="text-brand-600 text-xs font-semibold mb-2">Engineers & Field Technicians</p>
+          <p class="text-ink-500 text-sm">8+ years in energy & manufacturing systems, installation and system design expertise</p>
         </div>
-        <!-- Haileleoul -->
-        <div class="bg-surface-50 rounded-2xl p-5 text-center border border-surface-200">
-          <div class="photo-placeholder w-20 h-20 rounded-full mx-auto mb-4"><p class="text-[10px] p-1">Haileleoul<br>photo</p></div>
-          <h4 class="font-display font-bold text-ink-900 text-sm">Haileleoul</h4>
-          <p class="text-brand-600 text-xs font-semibold mb-2">Operations</p>
-          <p class="text-ink-400 text-xs">20 yrs Banking & Mfg</p>
+
+        <!-- Finance & Administration -->
+        <div class="bg-surface-50 rounded-2xl p-6 border border-surface-200 lift text-center">
+          <div class="w-14 h-14 rounded-2xl bg-brand-500 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h4 class="font-display font-bold text-ink-900 mb-1">Finance & Administration</h4>
+          <p class="text-brand-600 text-xs font-semibold mb-2">Finance & Admin Staff</p>
+          <p class="text-ink-500 text-sm">10+ years financial reporting & budgeting experience</p>
         </div>
-        <!-- Humnawak -->
-        <div class="bg-surface-50 rounded-2xl p-5 text-center border border-surface-200">
-          <div class="photo-placeholder w-20 h-20 rounded-full mx-auto mb-4"><p class="text-[10px] p-1">Humnawak<br>photo</p></div>
-          <h4 class="font-display font-bold text-ink-900 text-sm">Humnawak</h4>
-          <p class="text-brand-600 text-xs font-semibold mb-2">Finance</p>
-          <p class="text-ink-400 text-xs">6 yrs Corporate Finance</p>
+
+        <!-- Sales & Marketing -->
+        <div class="bg-surface-50 rounded-2xl p-6 border border-surface-200 lift text-center">
+          <div class="w-14 h-14 rounded-2xl bg-brand-500 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h4 class="font-display font-bold text-ink-900 mb-1">Sales & Marketing</h4>
+          <p class="text-brand-600 text-xs font-semibold mb-2">Sales & Marketing Experts</p>
+          <p class="text-ink-500 text-sm">7+ years B2B/institutional sales managing client acquisition and brand positioning</p>
         </div>
-        <!-- Gutu -->
-        <div class="bg-surface-50 rounded-2xl p-5 text-center border border-surface-200">
-          <div class="photo-placeholder w-20 h-20 rounded-full mx-auto mb-4"><p class="text-[10px] p-1">Gutu<br>photo</p></div>
-          <h4 class="font-display font-bold text-ink-900 text-sm">Gutu Bedase</h4>
-          <p class="text-brand-600 text-xs font-semibold mb-2">Marketing</p>
-          <p class="text-ink-400 text-xs">2 yrs SW Dev & Energy</p>
+
+        <!-- Project Management -->
+        <div class="bg-surface-50 rounded-2xl p-6 border border-surface-200 lift text-center">
+          <div class="w-14 h-14 rounded-2xl bg-brand-500 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h4 class="font-display font-bold text-ink-900 mb-1">Project Management</h4>
+          <p class="text-brand-600 text-xs font-semibold mb-2">Operations & Logistics Staff</p>
+          <p class="text-ink-500 text-sm">5+ years large-scale project implementation, procurement and supply chain management</p>
+        </div>
+
+        <!-- After-Sales & Support -->
+        <div class="bg-surface-50 rounded-2xl p-6 border border-surface-200 lift text-center">
+          <div class="w-14 h-14 rounded-2xl bg-brand-500 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h4 class="font-display font-bold text-ink-900 mb-1">After-Sales & Support</h4>
+          <p class="text-brand-600 text-xs font-semibold mb-2">Customer Support Officers</p>
+          <p class="text-ink-500 text-sm">3+ years customer support experience ensuring long-term system performance</p>
         </div>
       </div>
 
-      <!-- VCE History callout -->
-      <div class="mt-12 bg-brand-50 rounded-2xl p-8 border border-brand-100 text-center">
-        <p class="text-ink-700">Backed by <strong class="text-ink-900">View Computer Engineering PLC</strong> — established 2005, 20+ years serving Ethiopian military, government, and enterprise clients. Trusted across 14 team members and hundreds of delivered projects.</p>
+      <!-- Partnership photo + history callout -->
+      <div class="mt-10 grid md:grid-cols-2 gap-4 items-stretch">
+        <div class="rounded-2xl overflow-hidden shadow-sm border border-surface-200">
+          <img src="photos/team.jpg" alt="VCE team at EverExceed factory — international supply chain partnership" class="w-full h-full object-cover" style="min-height:200px;">
+        </div>
+        <div class="bg-brand-50 rounded-2xl p-8 border border-brand-100 flex items-center">
+          <p class="text-ink-700">Backed by <strong class="text-ink-900">View Computer Engineering PLC</strong> — established 2005, 20+ years serving Ethiopian military, government, and enterprise clients across hundreds of delivered projects.</p>
+        </div>
       </div>
     </div>
   </section>
 
 
-  <!-- ============== THE ASK ============== -->
+  <!-- ============== THE ASK ==============
   <section id="ask" class="py-20 md:py-28 bg-surface-50">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-16">
@@ -1007,7 +1224,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 
   <!-- ============== IMPACT ============== -->
@@ -1081,7 +1298,9 @@
 
       <div class="bg-surface-50 rounded-2xl p-8 md:p-10 border border-surface-200 text-left">
         <div class="flex flex-col md:flex-row gap-8 items-center">
-          <div class="photo-placeholder w-28 h-28 rounded-full shrink-0"><p class="text-[10px] p-2">Esayas<br>photo</p></div>
+          <div class="w-28 h-28 rounded-full bg-brand-100 flex items-center justify-center shrink-0">
+            <svg class="w-16 h-16 text-brand-400" fill="none" stroke="currentColor" stroke-width="1.2" viewBox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
           <div>
             <h3 class="font-display font-bold text-xl text-ink-900 mb-1">Esayas Efa Wakjira</h3>
             <p class="text-brand-600 font-medium text-sm mb-4">Founder & CEO, View Computer Engineering PLC</p>
@@ -1110,15 +1329,35 @@
   <footer class="py-8 bg-ink-900 text-ink-400 text-center text-xs">
     <div class="max-w-6xl mx-auto px-6">
       <div class="flex items-center justify-center gap-2 mb-3">
-        <div class="w-6 h-6 rounded flex items-center justify-center" style="background-color:#bf0b0c;">
-          <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-        </div>
-        <span class="font-display font-bold text-sm text-white">View Computer Engineering PLC</span>
+        <img src="photos/logo.png" alt="VCE Logo" class="h-8 w-auto" style="filter: brightness(0) invert(1);">
       </div>
+      <p class="text-ink-300 italic text-xs mb-2 max-w-xl mx-auto">"To become Ethiopia's leading provider of sustainable hybrid power solutions, empowering communities, enabling inclusive economic growth, and supporting the nation's transition to clean energy."</p>
       <p>© 2026 View Computer Engineering PLC. All rights reserved. Patent pending.</p>
     </div>
   </footer>
 
+
+  <!-- ============== BACK TO TOP ============== -->
+  <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top"
+    style="position:fixed; bottom:28px; right:28px; z-index:50; width:44px; height:44px; border-radius:50%; background-color:#203864; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 20px rgba(0,0,0,0.18); opacity:0; transform:translateY(12px); transition:opacity 0.25s ease, transform 0.25s ease; pointer-events:none;">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+  <script>
+    (function(){
+      const btn = document.getElementById('back-to-top');
+      window.addEventListener('scroll', function(){
+        if(window.scrollY > 400){
+          btn.style.opacity = '1';
+          btn.style.transform = 'translateY(0)';
+          btn.style.pointerEvents = 'auto';
+        } else {
+          btn.style.opacity = '0';
+          btn.style.transform = 'translateY(12px)';
+          btn.style.pointerEvents = 'none';
+        }
+      }, {passive:true});
+    })();
+  </script>
 
   <!-- ============== SCROLL REVEAL JS ============== -->
   <script>
